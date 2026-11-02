@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-"""A beginner-friendly, console-based Hangman game."""
-
 import random
 from pathlib import Path
 
