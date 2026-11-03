@@ -1,55 +1,33 @@
-# <h1 align="center">📈 Stock Portfolio Performance Tracker</h1>
+# Automated File Organizer & Cleanup Utility
 
-<p align="center">
-  <strong>A Python-Based Investment Portfolio Tracking Application</strong>
-</p>
+<div align="center">
 
-<p align="center">
-  Developed as part of my Datheon Internship.
-</p>
+  <h2>Automated File Organizer & Cleanup Utility</h2>
+  <p>A Python-based tool to automatically organize files into folders based on their extensions.</p>
 
----
+</div>
 
-<h2>📌 About The Project</h2>
+## About
 
-<p>
-  The Stock Portfolio Performance Tracker is a Python-based application
-  that helps users track their stock investments and monitor portfolio
-  performance.
-</p>
+The Automated File Organizer & Cleanup Utility is a Python-based program that automatically organizes files into separate folders based on their file extensions. It helps keep directories clean and organized by sorting documents, images, videos, archives, and code files into their respective folders.
 
-<p>
-  Users can enter stock ticker symbols, purchase prices, and share quantities.
-  The program retrieves the latest available stock prices, calculates the
-  total investment, current market value, and percentage gain or loss for
-  each holding. It also saves portfolio performance records automatically
-  into a CSV file.
-</p>
+The program also handles duplicate filenames, manages permission errors, and records file operations in a log file.
 
-<h2>✨ Features</h2>
+## Features
 
-<ul>
-  <li>Loads stock ticker symbols from an external CSV file.</li>
-  <li>Validates stock symbols before adding them to the portfolio.</li>
-  <li>Accepts stock purchase prices and share quantities.</li>
-  <li>Retrieves latest available stock prices using Yahoo Finance.</li>
-  <li>Supports manual current price entry if live price retrieval fails.</li>
-  <li>Calculates total invested capital.</li>
-  <li>Calculates current portfolio market value.</li>
-  <li>Calculates individual stock profit and loss.</li>
-  <li>Calculates percentage gain or loss for each holding.</li>
-  <li>Displays a formatted portfolio performance report.</li>
-  <li>Automatically saves portfolio records into a CSV file.</li>
-</ul>
+- Automatically organizes files based on their extensions.
+- Creates folders such as Documents, Images, Videos, Archives, Code, and Others.
+- Moves files into their appropriate folders using the `shutil` module.
+- Prevents filename conflicts by generating unique filenames.
+- Handles permission errors and other file operation errors.
+- Skips directories and symbolic links.
+- Maintains an activity log in `organizer.log`.
+- Displays a summary of moved, skipped, and failed files.
 
-<h2>🛠️ Technologies Used</h2>
+## Technologies Used
 
-<ul>
-  <li>Python 3</li>
-  <li>CSV Module</li>
-  <li>File Handling</li>
-  <li>Dictionary Data Structure</li>
-  <li>Datetime Module</li>
-  <li>Pathlib Module</li>
-  <li>YFinance Library</li>
-</ul>
+- **Python 3**: Main programming language.
+- **OS Module**: Used to access and inspect directory contents.
+- **Shutil Module**: Used to move files between folders.
+- **Pathlib Module**: Used to manage file and directory paths.
+- **Logging Module**: Used to record file operations and errors.
