@@ -1,0 +1,2 @@
+timestamp,ticker,company,shares,buy_price,current_price,invested,market_value,gain_loss,gain_loss_percent,price_source
+2026-11-03T21:09:16+05:45,AAPL,Apple Inc.,2.0,180.0,200.0,360.0,400.0,40.0,11.11111111111111,Manual
