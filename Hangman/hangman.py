@@ -79,7 +79,6 @@ HANGMAN_STAGES = [
 
 
 def load_words():
-    """Load words from words.txt, or use the built-in list."""
     if WORD_LIST_FILE.is_file():
         try:
             words = [
@@ -96,7 +95,6 @@ def load_words():
 
 
 def display_game(secret_word, guessed_letters, wrong_guesses):
-    """Show the gallows, masked word, and letters already guessed."""
     print(HANGMAN_STAGES[wrong_guesses])
     masked_word = " ".join(
         letter.upper() if letter in guessed_letters else "_"
@@ -108,7 +106,6 @@ def display_game(secret_word, guessed_letters, wrong_guesses):
 
 
 def get_guess(guessed_letters):
-    """Ask until the player enters one new alphabetic letter."""
     while True:
         guess = input("\nGuess a letter: ").strip().lower()
 
@@ -121,7 +118,6 @@ def get_guess(guessed_letters):
 
 
 def play_game():
-    """Run one complete round of Hangman."""
     secret_word = random.choice(load_words())
     guessed_letters = set()
     wrong_guesses = 0
@@ -158,7 +154,6 @@ def play_game():
 
 
 def main():
-    """Offer another round until the player chooses to quit."""
     while True:
         play_game()
         again = input("\nPlay again? (y/n): ").strip().lower()
