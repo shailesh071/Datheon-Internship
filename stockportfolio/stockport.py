@@ -9,7 +9,6 @@ OUTPUT_FILE = BASE_DIR / "portfolio_summary.csv"
 
 
 def load_companies():
-    """Load ticker symbols and company names from the supplied CSV file."""
     companies = {}
     try:
         with CONSTITUENTS_FILE.open("r", newline="", encoding="utf-8-sig") as file:
@@ -34,7 +33,6 @@ def load_companies():
 
 
 def get_current_price(ticker):
-    """Try to retrieve the latest available price with yfinance."""
     try:
         yf = importlib.import_module("yfinance")
 
@@ -55,7 +53,6 @@ def get_current_price(ticker):
 
 
 def ask_positive_number(prompt):
-    """Ask until the user enters a positive number."""
     while True:
         try:
             value = float(input(prompt).strip())
@@ -67,7 +64,6 @@ def ask_positive_number(prompt):
 
 
 def collect_positions(companies):
-    """Collect portfolio holdings from the user."""
     positions = {}
     print("\nEnter your stock holdings.")
     print("Type DONE when you have finished adding stocks.\n")
@@ -113,7 +109,6 @@ def collect_positions(companies):
 
 
 def calculate_summary(positions):
-    """Calculate invested value, market value, and gain/loss per holding."""
     rows = []
     total_invested = 0.0
     total_market_value = 0.0
@@ -155,7 +150,6 @@ def calculate_summary(positions):
 
 
 def display_summary(rows, totals):
-    """Print a readable portfolio report."""
     print("\n" + "=" * 92)
     print("                    STOCK PORTFOLIO PERFORMANCE")
     print("=" * 92)
@@ -186,7 +180,6 @@ def display_summary(rows, totals):
 
 
 def save_to_csv(rows, totals):
-    """Save the current report to portfolio_summary.csv."""
     timestamp = datetime.now().astimezone().isoformat(timespec="seconds")
     fieldnames = [
         "timestamp", "ticker", "company", "shares", "buy_price",
