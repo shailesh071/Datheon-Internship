@@ -7,7 +7,6 @@ BASE_DIR = Path(__file__).resolve().parent
 CONSTITUENTS_FILE = BASE_DIR / "constituents.csv"
 OUTPUT_FILE = BASE_DIR / "portfolio_summary.csv"
 
-
 def load_companies():
     companies = {}
     try:
