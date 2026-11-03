@@ -1,7 +1,7 @@
-# <h1 align="center">🎮 Hangman Game</h1>
+# <h1 align="center">📈 Stock Portfolio Performance Tracker</h1>
 
 <p align="center">
-  <strong>A Python-Based Word Guessing Game</strong>
+  <strong>A Python-Based Investment Portfolio Tracking Application</strong>
 </p>
 
 <p align="center">
@@ -13,29 +13,43 @@
 <h2>📌 About The Project</h2>
 
 <p>
-  Hangman is a simple command-line word guessing game developed using Python.
-  The player must guess a randomly selected English word one letter at a time.
-  The player gets a maximum of 6 incorrect attempts to guess the correct word.
+  The Stock Portfolio Performance Tracker is a Python-based application
+  that helps users track their stock investments and monitor portfolio
+  performance.
+</p>
+
+<p>
+  Users can enter stock ticker symbols, purchase prices, and share quantities.
+  The program retrieves the latest available stock prices, calculates the
+  total investment, current market value, and percentage gain or loss for
+  each holding. It also saves portfolio performance records automatically
+  into a CSV file.
 </p>
 
 <h2>✨ Features</h2>
 
 <ul>
-  <li>Random English word selection.</li>
-  <li>Uses an external English word list.</li>
-  <li>Maximum of 6 incorrect attempts.</li>
-  <li>ASCII art Hangman stages.</li>
-  <li>Displays correctly guessed letters.</li>
-  <li>Tracks previously guessed letters.</li>
-  <li>Prevents duplicate guesses.</li>
-  <li>Win and game-over messages.</li>
-  <li>Option to play again.</li>
+  <li>Loads stock ticker symbols from an external CSV file.</li>
+  <li>Validates stock symbols before adding them to the portfolio.</li>
+  <li>Accepts stock purchase prices and share quantities.</li>
+  <li>Retrieves latest available stock prices using Yahoo Finance.</li>
+  <li>Supports manual current price entry if live price retrieval fails.</li>
+  <li>Calculates total invested capital.</li>
+  <li>Calculates current portfolio market value.</li>
+  <li>Calculates individual stock profit and loss.</li>
+  <li>Calculates percentage gain or loss for each holding.</li>
+  <li>Displays a formatted portfolio performance report.</li>
+  <li>Automatically saves portfolio records into a CSV file.</li>
 </ul>
 
 <h2>🛠️ Technologies Used</h2>
 
 <ul>
   <li>Python 3</li>
-  <li>Random Module</li>
+  <li>CSV Module</li>
   <li>File Handling</li>
+  <li>Dictionary Data Structure</li>
+  <li>Datetime Module</li>
+  <li>Pathlib Module</li>
+  <li>YFinance Library</li>
 </ul>
